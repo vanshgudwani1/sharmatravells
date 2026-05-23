@@ -1,0 +1,6 @@
+/* Styles are handled by Tailwind CDN in index.html */
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

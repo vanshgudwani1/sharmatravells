@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sharma Travel Agents - Premium Vehicle Rentals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-primary-container": "#fcfcff",
+                  "on-secondary": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "tertiary-fixed-dim": "#3de273",
+                  "tertiary-fixed": "#66ff8e",
+                  "on-primary-fixed": "#001e2f",
+                  "surface-container-highest": "#d2e4fb",
+                  "on-secondary-container": "#643900",
+                  "on-tertiary-container": "#003211",
+                  "on-secondary-fixed": "#2c1600",
+                  "secondary": "#8a5100",
+                  "surface-bright": "#f7f9ff",
+                  "on-surface": "#0b1d2d",
+                  "primary-container": "#007cb4",
+                  "primary-fixed": "#cae6ff",
+                  "secondary-container": "#fc9910",
+                  "secondary-fixed-dim": "#ffb86e",
+                  "on-tertiary-fixed-variant": "#005322",
+                  "on-primary": "#ffffff",
+                  "outline": "#6f7881",
+                  "primary-fixed-dim": "#8ccdff",
+                  "primary": "#00628f",
+                  "error": "#ba1a1a",
+                  "surface-tint": "#006493",
+                  "tertiary": "#006d2f",
+                  "on-tertiary-fixed": "#002109",
+                  "on-secondary-fixed-variant": "#693c00",
+                  "on-error-container": "#93000a",
+                  "on-background": "#0b1d2d",
+                  "tertiary-container": "#00a74c",
+                  "error-container": "#ffdad6",
+                  "outline-variant": "#bec8d2",
+                  "surface-container-low": "#eef4ff",
+                  "inverse-primary": "#8ccdff",
+                  "surface-container-high": "#d9eaff",
+                  "inverse-on-surface": "#e9f1ff",
+                  "surface-variant": "#d2e4fb",
+                  "surface-container": "#e4efff",
+                  "surface-dim": "#cadcf2",
+                  "on-surface-variant": "#3f4850",
+                  "secondary-fixed": "#ffdcbd",
+                  "background": "#f7f9ff",
+                  "surface": "#f7f9ff",
+                  "on-primary-fixed-variant": "#004b70",
+                  "inverse-surface": "#213243",
+                  "on-tertiary": "#ffffff",
+                  "on-error": "#ffffff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "gutter": "24px",
+                  "stack-lg": "32px",
+                  "container-max": "1280px",
+                  "margin-x": "20px",
+                  "section-padding": "80px",
+                  "stack-sm": "8px",
+                  "stack-md": "16px"
+          },
+          "fontFamily": {
+                  "display-lg": ["Work Sans"],
+                  "body-lg": ["Be Vietnam Pro"],
+                  "headline-lg-mobile": ["Work Sans"],
+                  "headline-lg": ["Work Sans"],
+                  "body-md": ["Be Vietnam Pro"],
+                  "label-md": ["Work Sans"],
+                  "headline-md": ["Work Sans"],
+                  "label-lg": ["Work Sans"]
+          },
+          "fontSize": {
+                  "display-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                  "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                  "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
+<div class="text-headline-md font-headline-md font-bold text-primary">Sharma Travel Agents</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary text-label-lg font-label-lg" href="#">HOME</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#">ABOUT</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#">SERVICES</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#">FLEET</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#">CONTACT</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-lg active:scale-95 duration-150">Call Now</button>
+</header>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A wide-angle, high-end photography shot of a sleek white luxury bus parked on a modern expressway at dawn. The soft morning light illuminates the polished exterior, creating a clean and professional corporate travel aesthetic. The scene is spacious and serene, emphasizing reliability and premium comfort with a palette of whites, cool blues, and soft morning greys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsIgeqvD0LvVwdHLqTgUfLmkJBhWqm_0UiegjVEqKqLrlm0030A7GWfjCbcR54akkv7pOGT6dZStyxuzJATDmWp1WyPn1XSN7O2umJzr6OckYaZCp0yRs85aDt_G_EZoLGF7lkyeSwspwdaqfcB-yoFg-DcXII242ZS887HCdA01kIiLXWXjCX8V4U0WpvF7sV01HndLBF2rDCQ2_x8E4bO_wf1-76ei9tYEUU3WBw7zQVrSAv_ttKzg0znB5-_2ugCbX8riLpQGU"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent"></div>
+<div class="relative z-10 container mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="text-white max-w-xl">
+<h1 class="font-display-lg text-display-lg mb-6">Ride in Comfort with <span class="text-secondary-fixed">Sharma Travel Agents</span></h1>
+<p class="font-body-lg text-body-lg opacity-90">The world's leading companies trust Sharma Travel Agents for high-quality Buses &amp; Tempo Travellers on rent. We promise the best prices, trained drivers &amp; 24/7 support.</p>
+</div>
+<div class="flex justify-end">
+<div class="bg-surface p-8 rounded-xl shadow-lg w-full max-w-md">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Get A Quick Call</h3>
+<form class="space-y-4">
+<div>
+<input class="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container bg-white" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<input class="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container bg-white" placeholder="Your Number" type="tel"/>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-lg py-4 rounded-lg uppercase tracking-wider hover:brightness-110 transition-all" type="submit">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface py-12 border-b border-outline-variant">
+<div class="container mx-auto px-gutter">
+<div class="flex flex-wrap items-center justify-between gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="text-on-surface-variant font-bold text-lg max-w-[200px]">Trusted By <span class="text-secondary">50+ Companies</span> Big &amp; Small</div>
+<div class="flex flex-wrap items-center gap-12">
+<img alt="Krafton" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFnhEF-VvlAN2cEx1IUxuMqiiVBsheKu9lNmUzZozmsJFX83D9DiZexpqVx3teDTCLm7x4GMH2uPSL5RofW5LwkwOTT_sJaigvIAJdJpN1kIKQBuflOB5wkvWHQPHMYJAoXCm3fbRtHUVRE6gJUgi-6iAGhI8lEBrgeNDEt4cTV9G6ZaaN9Qb76t3IfCg4x7vtNxYsabNh5thrEhIull6h2OpPly8h1d5fFw_2VQ5b_bpfWzV9F5DGMUIdEgtVQ-brdBv-11RoDrc"/>
+<img alt="Royal Enfield" class="h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAGQLRCJ81NMMz9BXTGx2BufULOBpBPbBt0X2ID5PAAQGFsECqnOLp5Rzwk1gWoxndx-yq88jg20ibg6uDHwusaywkT34pTLB2jOcewutCpZOo9BUs8pGdQi8bsm14E0rulXdBgrKQXii2Oyh1nowCYzDvRIQsyFaD0xbY3zQusEJeHgx6m-vwNitITeb9bA8Oss_AtOpnIuI4Zr58h7tL3cuWYoAijwU049K0VUVM-To49ch3ja8jVot-rSFM37SA6n_OoqsmkMk"/>
+<img alt="Lokmat" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNjjrPvAVHT-mAcUycJU_mzZZ_MOmfDActRp_a5ITaUXUBMsL2T8S2YxNhPntxT9JbINdzETefSQKvlTtXKn_xY7yVM8DIB5XJUWBtHhXVU92-xS8EOu_Q5ZXfTy8bp3guv4wW3WS1-ro0iaWLeRh78frNUxzWonXTgCCn51BxIAuVl6rVq62nzyjcsVBle3SyI6HujKloKnNFqFHyedIAZQkNTWcauAfAkgvgRZOmnpJr5CjLvwcQzpj_QI-h2-gVWU3UBsNSYOg"/>
+<img alt="HPCL" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAULabHMQVlw7WMrWYZ5PSsWqho7KHTxLAVZsl6l_4ON3h_NdFJegypqdxlQ3dE0mlmOu5AgDeFQbw52hwUMtRT6q6Vub4w7LCFDh7M1cxgutUh1mCqX_fCkD9qRMjptFqsUwlB2zCgtdJf2XB7VN_ob0QbUR8EctATUAv2N3lmWPvYi_3g6BseTDO6tdLDLpmaayVd-D1MrdCW3FX_ezwJBPa9c0LeX8Hkcjj0CNhRx6QZtPZsOiy6sMKKFdp79zX77sjyl-4_lE8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlight Banner -->
+<div class="bg-primary-container py-4 text-center">
+<h2 class="text-white font-headline-md text-headline-md">Turning Miles into Smiles with Sharma Travel Agents</h2>
+</div>
+<!-- Fleet Gallery -->
+<section class="py-section-padding container mx-auto px-gutter">
+<div class="text-center mb-16">
+<span class="text-secondary font-bold text-label-lg tracking-widest uppercase">Luxury Vehicle Rentals</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Book Your Cabs, Travellers &amp; Busses</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Vehicle Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all group">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professionally photographed 4+1 seater luxury sedan parked in a minimalist showroom environment. The car's metallic silver finish gleams under soft, overhead studio lighting, emphasizing its sleek, modern lines. The background is a neutral, high-key grey, ensuring the vehicle is the central focus. The image conveys a sense of reliability, executive comfort, and high-quality maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe2h0mnQDJgDrmRzR7_zGpysnDsKgJ9bP5Zs5clXZFed2RK8Q_37kO8cU6slnXBPw9bOQFcaoUTh99E2H8sIH3NHahMNThmd_GNZr0-Q751h3WFnjKjUO1SP-FalLMIFwA_MFZ6V2osuS5AmNC280okfYj6wvpBziVSMCaE4x30_t6964BXKjkoLKves-dfARt9CFd0V6sbE9Wx12eqQTi7E8Ci1eP00c1f3AuBgnPcezz7C5kycABzHNtxqt8KvPJ07vIEFD93Q0"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Luxury</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">4+1 SEATER SEDAN</h3>
+<ul class="space-y-2 mb-6 text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Comfortable Seats</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Ample Space For Luggage</li>
+</ul>
+<div class="flex justify-between items-center pb-6 mb-6 border-b border-outline-variant">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">music_note</span>
+<span class="text-label-md font-label-md">Music</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">map</span>
+<span class="text-label-md font-label-md">GPS</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">airline_seat_recline_extra</span>
+<span class="text-label-md font-label-md">Recliner</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">ac_unit</span>
+<span class="text-label-md font-label-md">AC</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg">Enquiry Now</button>
+<button class="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg">Whatsapp</button>
+</div>
+</div>
+</div>
+<!-- Vehicle Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all group">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A spacious 14 seater Maharaja Traveller parked on a scenic mountain road. The vehicle is white with premium trim details, and the wide windows reflect a clear blue sky and lush greenery. The lighting is bright and natural, highlighting the vehicle's large capacity and luxury build. The overall mood is adventurous yet comfortable, perfect for group tours or family outings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSNmZ6Y8VQ8JaStge-vC-YF1-2lcBy_7OhMxhJWwqj7xb9qCPXsX2G8nO5hqX90jD5_OC1SM-J7tWAcyO6VyMkvtOgRVvlbhhJ6zDQqBCX2EgxcXzVZGZPL3ctw97goZIGqFN_hlVf5h5NwqTSMUz2qLMLR0HtnczjVMWlAnre9WeN-X83sH3ehSSnTDH8ETBfJy-K58vYDsrk2HLzi1rSHToWBzlYYwu9cUH-uMWNlWzEzPrWouO0uTJICxQvB2yZFtYnSFZAEs"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">14 SEATER MAHARAJA TRAVELLER</h3>
+<ul class="space-y-2 mb-6 text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Comfortable And Pushback Seats</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> AC + ICE Box</li>
+</ul>
+<div class="flex justify-between items-center pb-6 mb-6 border-b border-outline-variant">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">music_note</span>
+<span class="text-label-md font-label-md">Music</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">map</span>
+<span class="text-label-md font-label-md">GPS</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">airline_seat_recline_extra</span>
+<span class="text-label-md font-label-md">Recliner</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">ac_unit</span>
+<span class="text-label-md font-label-md">AC</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg">Enquiry Now</button>
+<button class="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg">Whatsapp</button>
+</div>
+</div>
+</div>
+<!-- Vehicle Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden border border-outline-variant hover:shadow-xl transition-all group">
+<div class="relative aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional view of a 45 seater luxury coach bus parked in a modern bus terminal. The bus is brilliant white with dark tinted windows and clean, bold branding elements. The lighting is sharp and even, emphasizing its grand scale and high-end features. The setting is clean and industrial, portraying the vehicle as a reliable choice for large-scale corporate transport." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRjR0xUApFx3ccXw2LvELx4jHrvNu_1aVSksZHOwx-xvXQCKUOFcbt3fCfVL-gM-SDudMJXffo-In-nRX7venv2V1kDUvbJbXqsWeI0kTkTuEKBeKaldIAg0i1YApZ2GF4208fiZzMYQppQOPLYbm7kdVsA8fcIoLoZobjkkehEWD0TA3XZBUN5jRlr4CByP20tRgn8Hc1qJVcpzJyJwOtv63xdYmWUd-gqOGRSaF2O_s--b6tRRcEozYCn64PwCqo6fnBzp8o9Qw"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">45 SEATER BUS</h3>
+<ul class="space-y-2 mb-6 text-on-surface-variant font-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Comfortable And Pushback Seats</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> AC + ICE Box</li>
+</ul>
+<div class="flex justify-between items-center pb-6 mb-6 border-b border-outline-variant">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">music_note</span>
+<span class="text-label-md font-label-md">Music</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">map</span>
+<span class="text-label-md font-label-md">GPS</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">airline_seat_recline_extra</span>
+<span class="text-label-md font-label-md">Recliner</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-outline">ac_unit</span>
+<span class="text-label-md font-label-md">AC</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg">Enquiry Now</button>
+<button class="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg">Whatsapp</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-outline text-on-surface font-bold px-8 py-3 rounded-lg hover:bg-outline-variant transition-colors">View All Fleet</button>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="container mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="rounded-xl h-64 w-full object-cover shadow-md" data-alt="Close up image of the interior of a luxury bus with high-quality leather seats and ambient lighting. The perspective is from the aisle, showing the spacious and clean environment. The lighting is soft and inviting, emphasizing the premium travel experience offered by Sharma Travel Agents. The colors are dominated by warm greys and subtle blue lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyIIA61p4MS5US8UoTXjusuPZozcfqz1KGbxtX73U-eFUvBRqNrNp4Nd8r3jpzoj9l673Q0yWJ6VQvn7sElp3j2Llq8Y8vlBjY_u5CNVHZW1p6vsuBDNqIovSl_5s3-9AMBXB-NF6_6rncRzstgOlTzgIlsatjjg9FsZ_jcgFXrE7qhwFiHzRitOptjnoZKuV7ZJhQMtRGQtKF655hNpMIs3zNYR-wZg7sThHD5I5wThLz-_FGI_KBInKT_ZPD1f06xjRZyRztOw"/>
+<img class="rounded-xl h-48 w-full object-cover shadow-md" data-alt="A wide view of a luxury traveller vehicle driving on a scenic highway with mountains in the background. The scene is shot during the golden hour, with warm sunlight reflecting off the vehicle's polished surface. The composition conveys a sense of freedom, travel, and premium logistics services for tourists and corporate groups." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMiKekYxbzOEQ88OpfQrIGcT3Pb7OTuPBFkrqz_xBvmcN81JS4_KNzbwN4awho4o8TYDa_LbyG76bImTeut8cISCEmaGwrOpdz-LCED4r_NABbg3S-XOez2QwgWAJ0r5pFCMP70STh0ykGGmtWqn-2t6hffzpjQMoIMKTO2G5kD1cdJGYVSIQWwP-9FBDHPm_E5UmjeJ6twrIcD_ntYxd4P_qS4hMxLYSkm0TffiU0lgUewa8suDj6bUO2mqtFgHRAY8-gzzVbdoE"/>
+</div>
+<div class="pt-12 space-y-4">
+<img class="rounded-xl h-48 w-full object-cover shadow-md" data-alt="Frontal view of a modern fleet of white transport vehicles parked neatly in a row at a logistics hub. The image is captured in bright daylight, showcasing the cleanliness and uniform appearance of the fleet. It highlights the professional scale and reliability of Sharma Travel Agents' transportation services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_TWobfXVK89F7e36_7qu6sRgtbXdx79_HdE4vKmh-SYMSzL8r70TsD9qr1Y7OnmJ0bqmUjjzcnUcNaQC0FJsp6JHdNurcwkAQ3BPg2gRYVlT-3DDk0Nh1mKWCBPbHXd0_FTXjGtC0zquaNW4PfN7BCHuV6ydbyZ0-C3Jh5c9IYeOxjBccUXPI1ZHI3IVEk4GKk1nz4SlC6FNVaU3Pk_o0p5epmRl7xMpS2Dhf67cXqCB1qlSwERp4hvskCtxe4tYcqq-YDqJa7Bw"/>
+<img class="rounded-xl h-64 w-full object-cover shadow-md" data-alt="Interior shot showing the advanced dashboard and comfortable driver's cabin of a premium Volvo bus. The dashboard features modern digital displays and controls, emphasizing the safety and technological advancement of the fleet. The lighting is clear and professional, showcasing a high standard of maintenance and driver comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwqO-j7beZLwdvk--7f7hYYMEhV9lblzCz36PTgx_f_fz-L11Q-6Q0QcArIRJjvFTzHouHMMMhcc7EPoGqkeEB4E4a69AAQ4FM_jGVdYL9IT75r30SQilpfTGyUhhf3kqyOD_CY833ojyNPRMsh_vZjfUbqBIVp_Ck1v6TFZV_tmAugThzQP5gMyXc17opE66MqMZCrvBoLOr-_ciSnI5zby2VlLHZXsyJKZTLPKVBytIEpM2gKuyDQlY0E9hBrTvyb-NtxFPI26Q"/>
+</div>
+</div>
+<div>
+<span class="text-primary font-bold text-label-lg tracking-widest uppercase">About Us</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 mb-6">Welcome to <span class="text-primary">Sharma Travel Agents</span></h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg">
+<p>Welcome to Sharma Travel Agents, a proud subsidiary of <span class="font-bold">Aggarwal Travels</span> – your trusted partner for safe, comfortable, and affordable travel across India. Based in Delhi, we specialize in offering a wide range of vehicles on rent, tailored to every travel need, from family trips and group outings to weddings, corporate tours, and airport transfers.</p>
+<p>Our fleet includes <span class="font-bold">4+1 seater sedans</span>, 6/7 seater MUVs, 12 to 16 seater Tempo Travellers, 20 to 26 seater Tempo Travellers, 12 to 16 seater Urbania vehicles, 27 to 29 seater mini buses, and 45 to 66 seater luxury buses.</p>
+<p>At Sharma Travel Agents, we prioritize convenience and transparency. Booking your ride is simple via call or message, and you can pay using cash, card, or online transfer. Our professional drivers ensure your journey is safe, timely, and enjoyable.</p>
+</div>
+<div class="mt-10 flex gap-8">
+<div class="flex flex-col">
+<span class="text-headline-md font-bold text-primary">15+</span>
+<span class="text-label-md uppercase opacity-60">Years Experience</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-md font-bold text-primary">500+</span>
+<span class="text-label-md uppercase opacity-60">Fleet Vehicles</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-md font-bold text-primary">10k+</span>
+<span class="text-label-md uppercase opacity-60">Happy Clients</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding container mx-auto px-gutter">
+<div class="text-center mb-16">
+<div class="flex justify-center items-center gap-4 mb-4">
+<img alt="Google" class="h-6 opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcYP3nl4bXMznrZIr6PVCOU-x8vLdOwrLZMlFwqAJHD6Kyrp9k_R0ENF7nx5PSLhXuOUM28faX9g06-h5sJDVRx1ghW_4zawyakmryQidKfguv5ZOjGDr-xRuxif2gPiYzVP2AaNhiDFiTik1JLTCG3JRm5wFEHNmEBMZUhvlF6N1ZI6c0dNCkxjWmxe3iUmjmjTATXY-Rolo4b6Eosd7nbtqAfttFYo-TxkouoUsrEGFs1iH1HC7GMe7TskdNmhuJEx6pwZHKHx8"/>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-bold text-on-surface-variant">4.9/5 Based on 500+ reviews</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">What Our Travelers Say</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-sm relative">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">RS</div>
+<div>
+<div class="font-bold">Ravi Sharma</div>
+<div class="text-label-md text-on-surface-variant">Delhi</div>
+</div>
+</div>
+<div class="flex text-secondary-container mb-3 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"I booked a Maharaja Traveller for our Himachal trip, and everything was perfectly managed. The driver was very professional and the vehicle was spotless."</p>
+<span class="material-symbols-outlined absolute top-8 right-8 text-outline opacity-20 text-4xl">format_quote</span>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-sm relative">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold">PM</div>
+<div>
+<div class="font-bold">Priya Mehta</div>
+<div class="text-label-md text-on-surface-variant">Gurugram</div>
+</div>
+</div>
+<div class="flex text-secondary-container mb-3 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Sharma Travel Agents made our Delhi to Agra trip so easy! The vehicle was very comfortable and the booking process was smooth for our group."</p>
+<span class="material-symbols-outlined absolute top-8 right-8 text-outline opacity-20 text-4xl">format_quote</span>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-sm relative">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold">AV</div>
+<div>
+<div class="font-bold">Anil Verma</div>
+<div class="text-label-md text-on-surface-variant">Noida</div>
+</div>
+</div>
+<div class="flex text-secondary-container mb-3 scale-75 origin-left">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant">"Our Rajasthan group tour with Sharma Travel Agents was superb! The 45 seater bus was spacious and clean. Excellent service and support."</p>
+<span class="material-symbols-outlined absolute top-8 right-8 text-outline opacity-20 text-4xl">format_quote</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-on-surface text-surface-container-lowest py-section-padding px-gutter">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Brand & About -->
+<div class="space-y-6">
+<div class="text-headline-md font-headline-md font-bold text-surface-container-lowest">Sharma Travel Agents</div>
+<p class="text-surface-variant opacity-80 text-body-md">Experience Royal Travel with Sharma Travel Agents. A proud subsidiary of Aggarwal Travels, offering premium Cabs, Maharaja Tempo Travellers, and Luxury Bus rentals across India.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">language</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-secondary-fixed">Our Vehicle</h4>
+<ul class="grid grid-cols-2 gap-y-3">
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">4+1 SEATER SEDAN</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">6/7 SEATER MUV</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">12 SEATER TRAVELLER</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">26 SEATER TRAVELLER</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">Buses</a></li>
+<li><a class="text-surface-variant opacity-80 hover:text-secondary-fixed hover:underline transition-colors text-label-md" href="#">Luxury Coaches</a></li>
+</ul>
+</div>
+<!-- Address -->
+<div class="space-y-6 lg:col-span-2">
+<h4 class="font-headline-md text-headline-md text-secondary-fixed">Contact Us</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="text-label-lg font-bold text-surface-container-lowest uppercase tracking-wider">Branch office</div>
+<p class="text-surface-variant opacity-80 text-body-md flex gap-2">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+              Third Floor, 138 B/2, Mohammadpur Village, Bhikaji Cama Palace, New Delhi - 110066
+            </p>
+</div>
+<div class="space-y-4">
+<div class="text-label-lg font-bold text-surface-container-lowest uppercase tracking-wider">Head office</div>
+<p class="text-surface-variant opacity-80 text-body-md flex gap-2">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+              K-88, Sham Nagar, Nearby subhash nagar metro station, New Delhi 110018
+            </p>
+<div class="space-y-2 mt-4">
+<p class="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed">phone_in_talk</span>
+                +91 8527499769
+              </p>
+<p class="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed">mail</span>
+                sirbusdelhi@gmail.com
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container mx-auto mt-16 pt-8 border-t border-outline flex flex-col md:flex-row justify-between items-center gap-4 text-surface-variant opacity-60 text-label-md">
+<div>© Sharma Travel Agents. All Right Reserved.</div>
+<div class="flex gap-8">
+<a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</footer>
+<!-- Floating Call Button for Mobile -->
+<div class="fixed bottom-6 right-6 z-50 md:hidden">
+<button class="bg-primary-container text-on-primary-container w-16 h-16 rounded-full shadow-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">call</span>
+</button>
+</div>
+</body></html>
