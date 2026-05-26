@@ -94,7 +94,7 @@ const App = () => {
         <a href="#" className="flex items-center">
           <img src="/images/logo.png" alt="Sharma Travel Agents" className="h-14 md:h-16 w-auto object-contain" />
         </a>
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-8 md:absolute md:left-1/2 md:-translate-x-1/2">
           <a className="text-primary font-bold border-b-2 border-primary text-label-lg font-label-lg" href="#">HOME</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#about">ABOUT</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#services">SERVICES</a>
