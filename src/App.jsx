@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const interiorImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuBiyIIA61p4MS5US8UoTXjusuPZozcfqz1KGbxtX73U-eFUvBRqNrNp4Nd8r3jpzoj9l673Q0yWJ6VQvn7sElp3j2Llq8Y8vlBjY_u5CNVHZW1p6vsuBDNqIovSl_5s3-9AMBXB-NF6_6rncRzstgOlTzgIlsatjjg9FsZ_jcgFXrE7qhwFiHzRitOptjnoZKuV7ZJhQMtRGQtKF655hNpMIs3zNYR-wZg7sThHD5I5wThLz-_FGI_KBInKT_ZPD1f06xjRZyRztOw';
 const dashboardImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwqO-j7beZLwdvk--7f7hYYMEhV9lblzCz36PTgx_f_fz-L11Q-6Q0QcArIRJjvFTzHouHMMMhcc7EPoGqkeEB4E4a69AAQ4FM_jGVdYL9IT75r30SQilpfTGyUhhf3kqyOD_CY833ojyNPRMsh_vZjfUbqBIVp_Ck1v6TFZV_tmAugThzQP5gMyXc17opE66MqMZCrvBoLOr-_ciSnI5zby2VlLHZXsyJKZTLPKVBytIEpM2gKuyDQlY0E9hBrTvyb-NtxFPI26Q';
 
-const VehicleCard = ({ vehicle }) => {
+const VehicleCard = ({ vehicle, onEnquire }) => {
   const images = vehicle.images || [vehicle.image, interiorImage, dashboardImage];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -54,9 +54,25 @@ const VehicleCard = ({ vehicle }) => {
             <span className="text-label-md font-label-md">AC</span>
           </div>
         </div>
-        <div className="flex gap-4">
-          <button className="flex-1 bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg hover:brightness-110 transition-all">Enquiry Now</button>
-          <a href="https://wa.me/918826712431" className="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg flex items-center justify-center hover:brightness-110 transition-all">Whatsapp</a>
+        <div className="grid grid-cols-3 gap-2">
+          <button 
+            onClick={() => onEnquire(vehicle.name)}
+            className="bg-primary-container text-on-primary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
+          >
+            Enquiry
+          </button>
+          <a 
+            href="tel:+918826712431"
+            className="bg-secondary-container text-on-secondary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
+          >
+            Call
+          </a>
+          <a 
+            href={`https://wa.me/918826712431?text=${encodeURIComponent(`Hello Sharma Travel Agents,\nI would like to enquire about ${vehicle.name}.`)}`}
+            className="bg-tertiary-container text-on-tertiary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
+          >
+            WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -272,7 +288,11 @@ const App = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fleetData.map((vehicle) => (
-              <VehicleCard key={vehicle.id} vehicle={vehicle} />
+              <VehicleCard 
+                key={vehicle.id} 
+                vehicle={vehicle} 
+                onEnquire={handleMostSearchedClick} 
+              />
             ))}
           </div>
         </section>
