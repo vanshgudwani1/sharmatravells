@@ -203,7 +203,7 @@ const App = () => {
           <img 
             className="absolute inset-0 w-full h-full object-cover" 
             alt="Luxury Bus" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsIgeqvD0LvVwdHLqTgUfLmkJBhWqm_0UiegjVEqKqLrlm0030A7GWfjCbcR54akkv7pOGT6dZStyxuzJATDmWp1WyPn1XSN7O2umJzr6OckYaZCp0yRs85aDt_G_EZoLGF7lkyeSwspwdaqfcB-yoFg-DcXII242ZS887HCdA01kIiLXWXjCX8V4U0WpvF7sV01HndLBF2rDCQ2_x8E4bO_wf1-76ei9tYEUU3WBw7zQVrSAv_ttKzg0znB5-_2ugCbX8riLpQGU" 
+            src="/images/hero.jpg" 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent"></div>
           <div className="relative z-10 container mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
