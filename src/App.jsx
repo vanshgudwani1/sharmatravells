@@ -56,7 +56,7 @@ const VehicleCard = ({ vehicle }) => {
         </div>
         <div className="flex gap-4">
           <button className="flex-1 bg-primary-container text-on-primary-container py-3 rounded-lg font-label-lg hover:brightness-110 transition-all">Enquiry Now</button>
-          <a href="https://wa.me/918527499769" className="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg flex items-center justify-center hover:brightness-110 transition-all">Whatsapp</a>
+          <a href="https://wa.me/918826712431" className="flex-1 bg-tertiary-container text-on-tertiary-container py-3 rounded-lg font-label-lg flex items-center justify-center hover:brightness-110 transition-all">Whatsapp</a>
         </div>
       </div>
     </div>
@@ -306,7 +306,7 @@ const App = () => {
                 <div className="space-y-2 mt-4">
                   <p className="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-fixed">phone_in_talk</span>
-                    +91 8527499769
+                    +91 8826712431
                   </p>
                   <p className="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-fixed">mail</span>
@@ -328,7 +328,7 @@ const App = () => {
 
       {/* Floating Call Button for Mobile */}
       <div className="fixed bottom-6 right-6 z-50 md:hidden">
-        <a href="tel:+918527499769" className="bg-primary-container text-on-primary-container w-16 h-16 rounded-full shadow-2xl flex items-center justify-center">
+        <a href="tel:+918826712431" className="bg-primary-container text-on-primary-container w-16 h-16 rounded-full shadow-2xl flex items-center justify-center">
           <span className="material-symbols-outlined text-3xl">call</span>
         </a>
       </div>
