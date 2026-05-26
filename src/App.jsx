@@ -91,7 +91,9 @@ const App = () => {
     <div className="bg-background text-on-surface font-body-md min-h-screen">
       {/* Top Navigation Bar */}
       <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
-        <div className="text-headline-md font-headline-md font-bold text-primary">Sharma Travel Agents</div>
+        <a href="#" className="flex items-center">
+          <img src="/images/logo.png" alt="Sharma Travel Agents" className="h-12 w-auto object-contain" />
+        </a>
         <nav className="hidden md:flex gap-8">
           <a className="text-primary font-bold border-b-2 border-primary text-label-lg font-label-lg" href="#">HOME</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#about">ABOUT</a>
