@@ -85,7 +85,101 @@ const fleetData = [
   { id: 19, name: '53 SEATER BUS', image: '/images/bus.png', features: ['Maximum Coach Capacity', 'Plush Ergonomic Recliners', 'Full AC with Climate Control', 'Perfect for Corporate/School Outings'], type: 'Luxury Coach' },
 ];
 
+const vehiclesList = [
+  '4+1 SEATER SEDAN',
+  '6+1 SEATER ERTIGA',
+  'KIA CARENS (6+1 SEATER)',
+  'INNOVA CRYSTA (6/7 SEATER)',
+  'MARUTI INVICTO (7 SEATER)',
+  'INNOVA HYCROSS (7 SEATER)',
+  '12 SEATER MAHARAJA TEMPO TRAVELLER',
+  '12 SEATER MAHARAJA URBANIA',
+  '15 SEATER MAHARAJA TEMPO TRAVELLER',
+  '16 SEATER URBANIA',
+  '16 SEATER TEMPO TRAVELLER',
+  '20 SEATER TEMPO TRAVELLER',
+  '26 SEATER TEMPO TRAVELLER',
+  '27 SEATER MINI BUS',
+  '29 SEATER MINI BUS',
+  '33 SEATER MINI BUS',
+  '45 SEATER BUS',
+  '49 SEATER BUS',
+  '53 SEATER BUS',
+  '56 SEATER BUS',
+  '60 SEATER BUS',
+  '66 SEATER BUS'
+];
+
+const mostSearchedTags = [
+  '4+1 SEATER SEDAN',
+  '6/7 SEATER MUV ON RENT',
+  '12 SEATER MAHARAJA TEMPO TRAVELLER',
+  '14 SEATER MAHARAJA TEMPO TRAVELLER',
+  '16 SEATER TEMPO TRAVELLER',
+  '20 SEATER TEMPO TRAVELLER',
+  '26 SEATER TEMPO TRAVELLER',
+  '12 SEATER URBANIA ON RENT',
+  '12 SEATER MAHARAJA URBANIA ON RENT',
+  '16 SEATER URBANIA ON RENT',
+  '27 SEATER MINI BUS ON RENT',
+  '29 SEATER MINI BUS ON RENT',
+  '45 SEATER BUS ON RENT',
+  '49 SEATER BUS ON RENT',
+  '53 SEATER BUS ON RENT',
+  '56 SEATER BUS ON RENT',
+  '60 SEATER BUS ON RENT',
+  '66 SEATER BUS ON RENT'
+];
+
 const App = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [popupName, setPopupName] = useState('');
+  const [popupMobile, setPopupMobile] = useState('');
+  const [popupVehicle, setPopupVehicle] = useState('');
+
+  const [heroName, setHeroName] = useState('');
+  const [heroMobile, setHeroMobile] = useState('');
+  const [heroVehicle, setHeroVehicle] = useState('');
+
+  useEffect(() => {
+    setIsPopupOpen(true);
+  }, []);
+
+  const handleHeroSubmit = (e) => {
+    e.preventDefault();
+    if (!heroName || !heroMobile) {
+      alert('Please fill out all fields.');
+      return;
+    }
+    const message = `Hello Sharma Travel Agents,\nI would like to make a quick booking/enquiry.\n\nName: ${heroName}\nMobile: ${heroMobile}\nVehicle: ${heroVehicle || 'Not Selected'}`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/918826712431?text=${encodedMessage}`, '_blank');
+  };
+
+  const handlePopupSubmit = (e) => {
+    e.preventDefault();
+    if (!popupName || !popupMobile) {
+      alert('Please fill out all fields.');
+      return;
+    }
+    const message = `Hello Sharma Travel Agents,\nI would like to make an instant booking enquiry.\n\nName: ${popupName}\nMobile: ${popupMobile}\nVehicle: ${popupVehicle || 'Not Selected'}`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/918826712431?text=${encodedMessage}`, '_blank');
+    setIsPopupOpen(false);
+  };
+
+  const handleMostSearchedClick = (tag) => {
+    let cleanVehicle = tag.replace(' ON RENT', '');
+    if (cleanVehicle === '6/7 SEATER MUV') {
+      cleanVehicle = 'KIA CARENS (6+1 SEATER)';
+    } else if (cleanVehicle === '14 SEATER MAHARAJA TEMPO TRAVELLER') {
+      cleanVehicle = '15 SEATER MAHARAJA TEMPO TRAVELLER';
+    } else if (cleanVehicle === '56 SEATER BUS' || cleanVehicle === '60 SEATER BUS' || cleanVehicle === '66 SEATER BUS') {
+      cleanVehicle = '53 SEATER BUS';
+    }
+    setPopupVehicle(cleanVehicle);
+    setIsPopupOpen(true);
+  };
 
   return (
     <div className="bg-background text-on-surface font-body-md min-h-screen">
@@ -118,16 +212,47 @@ const App = () => {
               <p className="font-body-lg text-body-lg opacity-90">The world's leading companies trust Sharma Travel Agents for high-quality Buses & Tempo Travellers on rent. We promise the best prices, trained drivers & 24/7 support.</p>
             </div>
             <div className="flex justify-end">
-              <div className="bg-surface p-8 rounded-xl shadow-lg w-full max-w-md">
-                <h3 className="font-headline-md text-headline-md text-on-surface mb-6">Get A Quick Call</h3>
-                <form className="space-y-4">
+              <div className="bg-surface p-8 rounded-xl shadow-lg w-full max-w-md text-on-surface">
+                <h3 className="font-headline-md text-headline-md mb-2 text-center font-bold">Instant Booking Call</h3>
+                <p className="text-center text-primary font-bold mb-6 text-label-lg flex items-center justify-center gap-1">
+                  <span className="material-symbols-outlined text-sm">phone_in_talk</span>
+                  +91 8826712431
+                </p>
+                <form onSubmit={handleHeroSubmit} className="space-y-4">
                   <div>
-                    <input className="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container bg-white" placeholder="Your Name" type="text" />
+                    <input 
+                      required 
+                      className="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface" 
+                      placeholder="Full Name" 
+                      type="text"
+                      value={heroName}
+                      onChange={(e) => setHeroName(e.target.value)}
+                    />
                   </div>
                   <div>
-                    <input className="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container bg-white" placeholder="Your Number" type="tel" />
+                    <input 
+                      required 
+                      className="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface" 
+                      placeholder="Mobile" 
+                      type="tel"
+                      value={heroMobile}
+                      onChange={(e) => setHeroMobile(e.target.value)}
+                    />
                   </div>
-                  <button className="w-full bg-secondary-container text-on-secondary-container font-label-lg py-4 rounded-lg uppercase tracking-wider hover:brightness-110 transition-all" type="submit">Submit</button>
+                  <div>
+                    <select 
+                      required
+                      className="w-full p-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface"
+                      value={heroVehicle}
+                      onChange={(e) => setHeroVehicle(e.target.value)}
+                    >
+                      <option value="">---Select Vehicle---</option>
+                      {vehiclesList.map((vehicle, idx) => (
+                        <option key={idx} value={vehicle}>{vehicle}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <button className="w-full bg-secondary-container text-on-secondary-container font-label-lg py-4 rounded-lg uppercase tracking-wider hover:brightness-110 active:scale-[0.98] duration-150 transition-all" type="submit">Submit</button>
                 </form>
               </div>
             </div>
@@ -317,6 +442,22 @@ const App = () => {
             </div>
           </div>
         </div>
+        {/* Most Searched section */}
+        <div className="container mx-auto mt-16 pt-8 border-t border-outline/30">
+          <h4 className="font-bold text-label-lg uppercase text-secondary-fixed mb-4 tracking-wider">MOST SEARCHED</h4>
+          <div className="flex flex-wrap gap-2.5">
+            {mostSearchedTags.map((tag, idx) => (
+              <button 
+                key={idx}
+                onClick={() => handleMostSearchedClick(tag)}
+                className="bg-surface/5 hover:bg-surface/15 text-surface-container-lowest text-[11px] font-medium px-3.5 py-2 rounded-full border border-dashed border-outline/40 hover:border-secondary-fixed transition-all duration-200"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="container mx-auto mt-16 pt-8 border-t border-outline flex flex-col md:flex-row justify-between items-center gap-4 text-surface-variant opacity-60 text-label-md">
           <div>© Sharma Travel Agents. All Right Reserved.</div>
           <div className="flex gap-8">
@@ -332,6 +473,72 @@ const App = () => {
           <span className="material-symbols-outlined text-3xl">call</span>
         </a>
       </div>
+
+      {/* Enquiry Popup Modal */}
+      {isPopupOpen && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 transition-all duration-300">
+          <div className="bg-surface/95 backdrop-blur-md rounded-2xl border border-outline-variant/60 shadow-2xl p-8 w-full max-w-md relative text-on-surface animate-fade-in duration-300">
+            {/* Close Cross Button */}
+            <button 
+              onClick={() => setIsPopupOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-variant/50 transition-colors"
+              aria-label="Close modal"
+            >
+              <span className="material-symbols-outlined text-xl">close</span>
+            </button>
+
+            {/* Title / Header */}
+            <h3 className="font-headline-md text-headline-md mb-2 text-center font-bold">Instant Booking Call</h3>
+            <p className="text-center text-primary font-bold mb-6 text-label-lg flex items-center justify-center gap-1">
+              <span className="material-symbols-outlined text-sm">phone_in_talk</span>
+              +91 8826712431
+            </p>
+
+            {/* Form */}
+            <form onSubmit={handlePopupSubmit} className="space-y-4">
+              <div>
+                <input 
+                  required 
+                  className="w-full p-3.5 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface" 
+                  placeholder="Full Name" 
+                  type="text" 
+                  value={popupName}
+                  onChange={(e) => setPopupName(e.target.value)}
+                />
+              </div>
+              <div>
+                <input 
+                  required 
+                  className="w-full p-3.5 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface" 
+                  placeholder="Mobile" 
+                  type="tel" 
+                  value={popupMobile}
+                  onChange={(e) => setPopupMobile(e.target.value)}
+                />
+              </div>
+              <div>
+                <select 
+                  required 
+                  className="w-full p-3.5 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-on-surface"
+                  value={popupVehicle}
+                  onChange={(e) => setPopupVehicle(e.target.value)}
+                >
+                  <option value="">---Select Vehicle---</option>
+                  {vehiclesList.map((vehicle, idx) => (
+                    <option key={idx} value={vehicle}>{vehicle}</option>
+                  ))}
+                </select>
+              </div>
+              <button 
+                className="w-full bg-secondary-container text-on-secondary-container font-label-lg py-4 rounded-lg uppercase tracking-wider hover:brightness-110 active:scale-[0.98] duration-150 transition-all shadow-md mt-2" 
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
