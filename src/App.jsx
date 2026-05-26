@@ -101,7 +101,6 @@ const App = () => {
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#fleet">FLEET</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#contact">CONTACT</a>
         </nav>
-        <a href="tel:+918527499769" className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-lg active:scale-95 duration-150">Call Now</a>
       </header>
 
       <main className="mt-20 md:mt-24">
