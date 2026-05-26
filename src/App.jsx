@@ -90,9 +90,9 @@ const App = () => {
   return (
     <div className="bg-background text-on-surface font-body-md min-h-screen">
       {/* Top Navigation Bar */}
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
+      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-3 bg-surface/95 backdrop-blur-sm border-b border-outline-variant">
         <a href="#" className="flex items-center">
-          <img src="/images/logo.png" alt="Sharma Travel Agents" className="h-12 w-auto object-contain" />
+          <img src="/images/logo.png" alt="Sharma Travel Agents" className="h-14 md:h-16 w-auto object-contain" />
         </a>
         <nav className="hidden md:flex gap-8">
           <a className="text-primary font-bold border-b-2 border-primary text-label-lg font-label-lg" href="#">HOME</a>
@@ -104,7 +104,7 @@ const App = () => {
         <a href="tel:+918527499769" className="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-lg active:scale-95 duration-150">Call Now</a>
       </header>
 
-      <main className="mt-16">
+      <main className="mt-20 md:mt-24">
         {/* Hero Section */}
         <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
           <img 
