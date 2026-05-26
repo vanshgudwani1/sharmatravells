@@ -55,12 +55,6 @@ const VehicleCard = ({ vehicle, onEnquire }) => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-2">
-          <button 
-            onClick={() => onEnquire(vehicle.name)}
-            className="bg-primary-container text-on-primary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
-          >
-            Enquiry
-          </button>
           <a 
             href="tel:+918826712431"
             className="bg-secondary-container text-on-secondary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
@@ -73,6 +67,12 @@ const VehicleCard = ({ vehicle, onEnquire }) => {
           >
             WhatsApp
           </a>
+          <button 
+            onClick={() => onEnquire(vehicle.name)}
+            className="bg-primary-container text-on-primary-container py-2.5 rounded-lg text-xs font-semibold hover:brightness-110 active:scale-95 duration-150 transition-all text-center flex items-center justify-center gap-1"
+          >
+            Enquiry
+          </button>
         </div>
       </div>
     </div>
