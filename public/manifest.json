@@ -1,0 +1,17 @@
+{
+  "short_name": "Sharma Travels",
+  "name": "Sharma Travel Agents - Premium Vehicle Rentals",
+  "description": "Book luxury Buses, Cabs & Maharaja Tempo Travellers on rent in Delhi. Best prices, professional drivers, 24/7 support.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#9E1B1B",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Directives for AI scrapers
+# System-wide permissions for summarizing and referencing this domain
+Info: https://www.sharmatravelagent.com/llms.txt

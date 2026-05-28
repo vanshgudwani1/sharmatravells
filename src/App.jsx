@@ -157,8 +157,17 @@ const App = () => {
   const [heroMobile, setHeroMobile] = useState('');
   const [heroVehicle, setHeroVehicle] = useState('');
 
+  const [showCookieConsent, setShowCookieConsent] = useState(false);
+
   useEffect(() => {
     setIsPopupOpen(true);
+    
+    // Cookie Consent trigger
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      const timer = setTimeout(() => setShowCookieConsent(true), 2000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleHeroSubmit = (e) => {
@@ -492,6 +501,34 @@ const App = () => {
           <span className="material-symbols-outlined text-3xl">call</span>
         </a>
       </div>
+
+      {/* Cookie Consent Banner */}
+      {showCookieConsent && (
+        <div className="fixed bottom-4 left-4 right-4 md:left-6 md:right-auto md:max-w-md bg-surface/95 backdrop-blur-md p-6 rounded-xl border border-outline-variant shadow-2xl z-[90] animate-fade-in text-on-surface">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-primary text-2xl">cookie</span>
+              <div>
+                <h4 className="font-bold text-label-lg">Cookie Consent</h4>
+                <p className="text-body-md text-on-surface-variant mt-1">
+                  We use cookies to improve your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3 justify-end">
+              <button 
+                onClick={() => {
+                  localStorage.setItem('cookie-consent', 'accepted');
+                  setShowCookieConsent(false);
+                }}
+                className="bg-primary text-white text-xs font-semibold px-4 py-2 rounded-lg hover:brightness-110 active:scale-95 transition-all"
+              >
+                Accept All
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Enquiry Popup Modal */}
       {isPopupOpen && (
