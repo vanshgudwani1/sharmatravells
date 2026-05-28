@@ -455,7 +455,7 @@ const App = () => {
                   </p>
                   <p className="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-fixed">mail</span>
-                    sirbusdelhi@gmail.com
+                    sharmatravels@gmail.com
                   </p>
                 </div>
               </div>
