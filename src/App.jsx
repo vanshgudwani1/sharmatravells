@@ -302,12 +302,12 @@ const App = () => {
           <div className="container mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img className="rounded-xl h-64 w-full object-cover shadow-md" alt="Interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyIIA61p4MS5US8UoTXjusuPZozcfqz1KGbxtX73U-eFUvBRqNrNp4Nd8r3jpzoj9l673Q0yWJ6VQvn7sElp3j2Llq8Y8vlBjY_u5CNVHZW1p6vsuBDNqIovSl_5s3-9AMBXB-NF6_6rncRzstgOlTzgIlsatjjg9FsZ_jcgFXrE7qhwFiHzRitOptjnoZKuV7ZJhQMtRGQtKF655hNpMIs3zNYR-wZg7sThHD5I5wThLz-_FGI_KBInKT_ZPD1f06xjRZyRztOw" />
-                <img className="rounded-xl h-48 w-full object-cover shadow-md" alt="Highway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMiKekYxbzOEQ88OpfQrIGcT3Pb7OTuPBFkrqz_xBvmcN81JS4_KNzbwN4awho4o8TYDa_LbyG76bImTeut8cISCEmaGwrOpdz-LCED4r_NABbg3S-XOez2QwgWAJ0r5pFCMP70STh0ykGGmtWqn-2t6hffzpjQMoIMKTO2G5kD1cdJGYVSIQWwP-9FBDHPm_E5UmjeJ6twrIcD_ntYxd4P_qS4hMxLYSkm0TffiU0lgUewa8suDj6bUO2mqtFgHRAY8-gzzVbdoE" />
+                <img className="rounded-xl h-64 w-full object-cover shadow-md" alt="Sharma Travels about image 1" src="/images/about-1.jpeg" />
+                <img className="rounded-xl h-48 w-full object-cover shadow-md" alt="Sharma Travels about image 2" src="/images/about-2.jpeg" />
               </div>
               <div className="pt-12 space-y-4">
-                <img className="rounded-xl h-48 w-full object-cover shadow-md" alt="Fleet Row" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_TWobfXVK89F7e36_7qu6sRgtbXdx79_HdE4vKmh-SYMSzL8r70TsD9qr1Y7OnmJ0bqmUjjzcnUcNaQC0FJsp6JHdNurcwkAQ3BPg2gRYVlT-3DDk0Nh1mKWCBPbHXd0_FTXjGtC0zquaNW4PfN7BCHuV6ydbyZ0-C3Jh5c9IYeOxjBccUXPI1ZHI3IVEk4GKk1nz4SlC6FNVaU3Pk_o0p5epmRl7xMpS2Dhf67cXqCB1qlSwERp4hvskCtxe4tYcqq-YDqJa7Bw" />
-                <img className="rounded-xl h-64 w-full object-cover shadow-md" alt="Dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwqO-j7beZLwdvk--7f7hYYMEhV9lblzCz36PTgx_f_fz-L11Q-6Q0QcArIRJjvFTzHouHMMMhcc7EPoGqkeEB4E4a69AAQ4FM_jGVdYL9IT75r30SQilpfTGyUhhf3kqyOD_CY833ojyNPRMsh_vZjfUbqBIVp_Ck1v6TFZV_tmAugThzQP5gMyXc17opE66MqMZCrvBoLOr-_ciSnI5zby2VlLHZXsyJKZTLPKVBytIEpM2gKuyDQlY0E9hBrTvyb-NtxFPI26Q" />
+                <img className="rounded-xl h-48 w-full object-cover shadow-md" alt="Sharma Travels about image 3" src="/images/about-3.jpeg" />
+                <img className="rounded-xl h-64 w-full object-cover shadow-md" alt="Sharma Travels about image 4" src="/images/about-4.jpeg" />
               </div>
             </div>
             <div>
@@ -439,14 +439,14 @@ const App = () => {
                 <div className="text-label-lg font-bold text-surface-container-lowest uppercase tracking-wider">Branch office</div>
                 <p className="text-surface-variant opacity-80 text-body-md flex gap-2">
                   <span className="material-symbols-outlined text-primary-fixed">location_on</span>
-                  Third Floor, 138 B/2, Mohammadpur Village, Bhikaji Cama Palace, New Delhi - 110066
+                  213 D, Second Floor, Vishwadeep Tower, Janakpuri District Center, Janakpuri, New Delhi, Delhi, 110058
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="text-label-lg font-bold text-surface-container-lowest uppercase tracking-wider">Head office</div>
                 <p className="text-surface-variant opacity-80 text-body-md flex gap-2">
                   <span className="material-symbols-outlined text-primary-fixed">location_on</span>
-                  K-88, Sham Nagar, Nearby subhash nagar metro station, New Delhi 110018
+                  6/26, 6 Block , Subhash Nagar, New Delhi -110027
                 </p>
                 <div className="space-y-2 mt-4">
                   <p className="text-surface-variant opacity-80 text-body-md flex items-center gap-2">
