@@ -207,7 +207,6 @@ const App = () => {
         <nav className="hidden md:flex gap-8 md:absolute md:left-1/2 md:-translate-x-1/2">
           <a className="text-primary font-bold border-b-2 border-primary text-label-lg font-label-lg" href="#">HOME</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#about">ABOUT</a>
-          <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#services">SERVICES</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#fleet">FLEET</a>
           <a className="text-on-surface-variant font-medium hover:text-primary transition-colors text-label-lg font-label-lg" href="#contact">CONTACT</a>
         </nav>
